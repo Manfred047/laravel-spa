@@ -1,6 +1,11 @@
 import Vue from 'vue'
 
 /**
+ * Config for axios
+ */
+import './helpers/axios-config'
+
+/**
  * Vue JS Directives
  */
 // import './directives/directives'
