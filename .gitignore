@@ -38,3 +38,5 @@ yarn-error.log*
 /public/sandbox/*
 # exception to the rule
 !/public/sandbox/.gitkeep
+
+mix-manifest.dev.json
