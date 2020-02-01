@@ -5,12 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link type="text/css" href="{{ mix('css/app.css') }}" rel="stylesheet">
+  @if(env('APP_ENV') === 'production')
+    <link type="text/css" href="{{ mix('production/css/app.css', 'production') }}" rel="stylesheet">
+  @else
+    <link type="text/css" href="{{ mix('sandbox/css/app.css', 'sandbox') }}" rel="stylesheet">
+  @endif
 
   <title>Laravel web SPA</title>
 </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript" charset="UTF-8" src="{{ mix('js/app.js') }}"></script>
+    @if(env('APP_ENV') === 'production')
+      <script type="text/javascript" charset="UTF-8" src="{{ mix('production/js/app.js', 'production') }}"></script>
+    @else
+      <script type="text/javascript" charset="UTF-8" src="{{ mix('sandbox/js/app.js', 'sandbox') }}"></script>
+      @endif
   </body>
 </html>
