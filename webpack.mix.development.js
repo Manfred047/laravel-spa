@@ -17,3 +17,4 @@ mix.webpackConfig({
 
 mix.js('resources/js/app.js', 'js')
 mix.sass('resources/sass/app.scss', 'css')
+mix.copyDirectory('resources/js/statics', 'public/sandbox/statics')
