@@ -2,13 +2,15 @@ import _ from 'lodash'
 
 const master = {
   getAuthTokenName () {
-    return process.env.AUTH_TOKEN_NAME || 'spa-oauth'
+    // eslint-disable-next-line no-undef
+    return AUTH_TOKEN_NAME
   },
   getStorageUserDataName () {
     return 'user_data'
   },
   getLangCookieName () {
-    return process.env.LANG_COOKIE_NAME || 'spa-oauth'
+    // eslint-disable-next-line no-undef
+    return LANG_COOKIE_NAME
   },
   /**
    * Opcion para obtener la url base de la api
@@ -17,8 +19,8 @@ const master = {
    * @returns {string}
    */
   api (url = '') {
-    const api = process.env.API_URL || 'http://127.0.0.1:8000/api/v1'
-    return `${api}/${url}`
+    // eslint-disable-next-line no-undef
+    return `${API_URL}/${url}`
   },
   /**
    * Obtiene el conjunto de errores (error 422), si no hay, retorna false.
